@@ -1,9 +1,11 @@
 body {
-  display: flex;
+  display: grid;
+  grid-template-areas: none;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
+  box-sizing: border-box;
 }
 
 .text {
@@ -12,4 +14,10 @@ body {
   background-color: darkblue;
   font-size: 22px;
   font-family: 'Arial', sans-serif;
+}
+
+@supports (position: sticky) {
+  body {
+    position: sticky;
+  }
 }
