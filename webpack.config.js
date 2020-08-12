@@ -1,9 +1,10 @@
-// Webpack v4
+/* eslint-disable */
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
-  entry: { main: './src/js/index.js' },
+  entry: { main: './src/js/main.js' },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.js'
@@ -42,6 +43,6 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
-    port: 9000
+    port: 7000
   },
 }
