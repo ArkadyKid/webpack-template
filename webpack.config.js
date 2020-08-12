@@ -1,5 +1,6 @@
 /* eslint-disable */
 const path = require('path');
+
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -26,6 +27,10 @@ module.exports = {
             use: ['css-loader', 'postcss-loader']
           }
         )
+      },
+      {
+        test: /\.pug$/,
+        loader: 'pug-loader'
       }
     ]
   },
@@ -36,8 +41,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       inject: false,
       hash: true,
-      template: './src/index.html',
-      filename: 'index.html'
+      template: './src/index.pug',
+      filename: 'index.html',
     }),
   ],
   devServer: {
